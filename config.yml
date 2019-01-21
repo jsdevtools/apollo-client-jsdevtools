@@ -1,0 +1,23 @@
+version: 2
+
+jobs:
+  Apollo Client:
+    docker:
+      - image: circleci/node:8
+
+    steps:
+      - checkout
+      - run: cd final/client && npm ci
+      - run: cd final/client && npm test
+      - run: cd final/client && npx apollo client:check
+
+      - run: |
+          if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            cd final/client && npx apollo client:push
+          fi
+
+workflows:
+  version: 2
+  Build and Test:
+    jobs:
+      - Apollo Client
