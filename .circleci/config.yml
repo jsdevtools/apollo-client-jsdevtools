@@ -7,13 +7,13 @@ jobs:
 
     steps:
       - checkout
-      - run: cd final/client && npm ci
-      - run: cd final/client && npm test
-      - run: cd final/client && npx apollo client:check
+      - run: npm ci
+      - run: npm test
+      - run: npx apollo client:check
 
       - run: |
           if [ "${CIRCLE_BRANCH}" == "master" ]; then
-            cd final/client && npx apollo client:push
+            npx apollo client:push
           fi
 
 workflows:
