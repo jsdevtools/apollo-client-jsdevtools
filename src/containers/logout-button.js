@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { ApolloConsumer } from 'react-apollo';
 
 import { menuItemClassName } from '../components/menu-item';
