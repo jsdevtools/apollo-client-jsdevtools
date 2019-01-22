@@ -4,7 +4,6 @@ jobs:
   Apollo Client:
     docker:
       - image: circleci/node:8
-
     steps:
       - checkout
       - run: npm ci
@@ -16,11 +15,10 @@ jobs:
       - run: # run tests
           name: Run Test and Coverage
           command: |
-            ./cc-test-reporter before-build
+            ./cc-test-reporter before-build --debug
             npm test
-            ./cc-test-reporter after-build --exit-code $?
+            ./cc-test-reporter after-build --debug --exit-code $?
       - run: npx apollo client:check
-
       - run: |
           if [ "${CIRCLE_BRANCH}" == "master" ]; then
             npx apollo client:push
