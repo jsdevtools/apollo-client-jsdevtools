@@ -10,4 +10,6 @@
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/jsdevtools/apollo-client-jsdevtools.svg?columns=all)](https://waffle.io/jsdevtools/apollo-client-jsdevtools)
 
+[![codecov](https://codecov.io/gh/jsdevtools/apollo-client-jsdevtools/branch/develop/graph/badge.svg)](https://codecov.io/gh/jsdevtools/apollo-client-jsdevtools)
+
 ## Client
