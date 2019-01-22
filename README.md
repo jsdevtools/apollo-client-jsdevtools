@@ -8,4 +8,6 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0bddbab0a7f34ab38b1db14f2f755602)](https://app.codacy.com/app/jsdevtools/apollo-client-jsdevtools?utm_source=github.com&utm_medium=referral&utm_content=jsdevtools/apollo-client-jsdevtools&utm_campaign=Badge_Grade_Settings)
 
+[![Waffle.io - Issues in progress](https://badge.waffle.io/jsdevtools/apollo-client-jsdevtools.png?label=in%20progress&title=In%20Progress)](http://waffle.io/jsdevtools/apollo-client-jsdevtools)
+
 ## Client
