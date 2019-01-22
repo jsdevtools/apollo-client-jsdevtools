@@ -47,5 +47,9 @@ workflows:
   Build and Test:
     jobs:
       - Apollo Client
-      - CoPilot
-      - Heroku Deploy
+      - CoPilot:
+          requires:
+            - Apollo Client
+      - Heroku Deploy:
+          requires:
+            - CoPilot
