@@ -23,6 +23,8 @@ jobs:
           if [ "${CIRCLE_BRANCH}" == "master" ]; then
             npx apollo client:push
           fi
+      - deploy:
+          command: bash <(curl -s https://copilot.blackducksoftware.com/ci/circle2/scripts/upload)
 
 workflows:
   version: 2
