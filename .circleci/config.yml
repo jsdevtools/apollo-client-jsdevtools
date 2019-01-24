@@ -4,8 +4,22 @@ jobs:
   Apollo Client:
     docker:
       - image: circleci/node:8
+      - image: circleci/openjdk:8-jdk
     steps:
       - checkout
+      - run:
+          name: Update ENGINE_API_KEY at Runtime
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              echo 'export ENGINE_API_KEY=$DEV_ENGINE_API_KEY' >> $BASH_ENV
+            fi
+            if [ "${CIRCLE_BRANCH}" == "staging" ]; then
+              echo 'export ENGINE_API_KEY=$STAGE_ENGINE_API_KEY' >> $BASH_ENV
+            fi
+            if [ "${CIRCLE_BRANCH}" == "prod" ]; then
+              echo 'export ENGINE_API_KEY=$PROD_ENGINE_API_KEY' >> $BASH_ENV
+            fi
+            source $BASH_ENV
       - run: npm ci
       - run:
           name: Setup Code Climate test-reporter
@@ -21,18 +35,12 @@ jobs:
               ./cc-test-reporter before-build --debug
             fi
             npm test
+            node node_modules/codecov/bin/codecov
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              node node_modules/codecov/bin/codecov
               ./cc-test-reporter after-build --debug --exit-code $?
             fi
       - run: npx apollo client:check
       - run: npx apollo client:push
-
-  CoPilot:
-    docker:
-      - image: circleci/openjdk:8-jdk
-    steps:
-      - checkout
       - run:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
@@ -60,9 +68,6 @@ workflows:
   Build and Test:
     jobs:
       - Apollo Client
-      - CoPilot:
-          requires:
-            - Apollo Client
       - Heroku Deploy:
           requires:
-            - CoPilot
+            - Apollo Client
