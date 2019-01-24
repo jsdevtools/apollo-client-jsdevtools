@@ -4,7 +4,6 @@ jobs:
   Apollo Client:
     docker:
       - image: circleci/node:8
-      - image: circleci/openjdk:8-jdk
     steps:
       - checkout
       - run:
@@ -41,6 +40,12 @@ jobs:
             fi
       - run: npx apollo client:check
       - run: npx apollo client:push
+
+  CoPilot:
+    docker:
+      - image: circleci/openjdk:8-jdk
+    steps:
+      - checkout
       - run:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
@@ -68,6 +73,9 @@ workflows:
   Build and Test:
     jobs:
       - Apollo Client
-      - Heroku Deploy:
+      - CoPilot:
           requires:
             - Apollo Client
+      - Heroku Deploy:
+          requires:
+            - CoPilot
