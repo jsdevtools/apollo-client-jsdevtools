@@ -12,4 +12,6 @@
 
 [![codecov](https://codecov.io/gh/jsdevtools/apollo-client-jsdevtools/branch/develop/graph/badge.svg)](https://codecov.io/gh/jsdevtools/apollo-client-jsdevtools)
 
+[![CircleCI](https://circleci.com/gh/jsdevtools/apollo-client-jsdevtools.svg?style=svg)](https://circleci.com/gh/jsdevtools/apollo-client-jsdevtools)
+
 ## Client
