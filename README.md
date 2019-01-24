@@ -1,5 +1,6 @@
 # Apollo Fullstack Tutorial
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/66dc8b78cfa84bcb9ea676617203d4cb)](https://app.codacy.com/app/jsdevtools/apollo-client-jsdevtools?utm_source=github.com&utm_medium=referral&utm_content=jsdevtools/apollo-client-jsdevtools&utm_campaign=Badge_Grade_Dashboard)
 [![Greenkeeper badge](https://badges.greenkeeper.io/jsdevtools/apollo-client-jsdevtools.svg)](https://greenkeeper.io/)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f16251b5099f0bd501d7/maintainability)](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools/maintainability)
