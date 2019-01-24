@@ -27,7 +27,7 @@ jobs:
               ./cc-test-reporter before-build --debug
               npm test
               node node_modules/codecov/bin/codecov
-              cat ./coverage/lcov.info | codacy-coverage
+              cat ./coverage/lcov.info | node node_modules/codacy-coverage/bin/codacy-coverage.js
               ./cc-test-reporter after-build --debug --exit-code $?
             else
               npm test
