@@ -28,12 +28,23 @@ jobs:
               npm test
               node node_modules/codecov/bin/codecov
               cat ./coverage/lcov.info | node node_modules/codacy-coverage/bin/codacy-coverage.js
+              cat ./coverage/lcov.info | node node_modules/coveralls/bin/coveralls.js
               ./cc-test-reporter after-build --debug --exit-code $?
             else
               npm test
             fi
-      - run: npx apollo client:check
-      - run: npx apollo client:push
+      - run: 
+          name: Run apollo engine checks
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ] || [ "${CIRCLE_BRANCH}" == "staging" ] || [ "${CIRCLE_BRANCH}" == "prod" ]; then
+              npx apollo client:check
+            fi
+      - run: 
+          name: Push to apollo engine
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ] || [ "${CIRCLE_BRANCH}" == "staging" ] || [ "${CIRCLE_BRANCH}" == "prod" ]; then
+              npx apollo client:push
+            fi
 
   CoPilot:
     docker:
