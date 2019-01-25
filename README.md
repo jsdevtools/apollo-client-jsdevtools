@@ -4,7 +4,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f16251b5099f0bd501d7/maintainability)](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools/maintainability)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/f16251b5099f0bd501d7/maintainability)](https://img.shields.io/codeclimate/maintainability-percentage/jsdevtools/apollo-client-jsdevtools.svg)
+[![Maintainability](https://img.shields.io/codeclimate/maintainability-percentage/jsdevtools/apollo-client-jsdevtools.svg)](https://api.codeclimate.com/v1/badges/f16251b5099f0bd501d7/maintainability)
 
 [![Test Coverage](https://img.shields.io/codeclimate/coverage/jsdevtools/apollo-client-jsdevtools.svg)](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools)
 
