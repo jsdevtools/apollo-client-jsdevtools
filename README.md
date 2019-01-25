@@ -26,4 +26,12 @@
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/jsdevtools/apollo-client-jsdevtools.svg?columns=all)](https://waffle.io/jsdevtools/apollo-client-jsdevtools)
 
+[![Commit Activity](https://www.github.com/jsdevtools/apollo-client-jsdevtools)](https://img.shields.io/github/commit-activity/m/jsdevtools/apollo-client-jsdevtools.svg)
+
+[![GitHub contributors](https://www.github.com/jsdevtools/apollo-client-jsdevtools)](https://img.shields.io/github/contributors/jsdevtools/apollo-client-jsdevtools.svg)
+
+[![GitHub last commit](https://www.github.com/jsdevtools/apollo-client-jsdevtools)](https://img.shields.io/github/last-commit/jsdevtools/apollo-client-jsdevtools.svg)
+
+[![GitHub Release Date](https://www.github.com/jsdevtools/apollo-client-jsdevtools)](https://img.shields.io/github/release-date/jsdevtools/apollo-client.svg)
+
 ## Client
