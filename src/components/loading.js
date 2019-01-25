@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import keyframes from '@emotion/keyframes';
+import { keyframes } from 'emotion';
 import { size } from 'polished';
 
 import { ReactComponent as Logo } from '../assets/logo.svg';
@@ -17,8 +17,8 @@ const Loading = styled(Logo)(size(64), {
   fill: colors.grey,
   path: {
     transformOrigin: 'center',
-    animation: `${spin} 1s linear infinite`,
-  },
+    animation: `${spin} 1s linear infinite`
+  }
 });
 
 export default Loading;
