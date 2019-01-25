@@ -26,12 +26,12 @@
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/jsdevtools/apollo-client-jsdevtools.svg?columns=all)](https://waffle.io/jsdevtools/apollo-client-jsdevtools)
 
-[![Commit Activity](https://www.github.com/jsdevtools/apollo-client-jsdevtools)](https://img.shields.io/github/commit-activity/m/jsdevtools/apollo-client-jsdevtools.svg)
+[![Commit Activity](https://img.shields.io/github/commit-activity/m/jsdevtools/apollo-client-jsdevtools.svg)](https://www.github.com/jsdevtools/apollo-client-jsdevtools)
 
-[![GitHub contributors](https://www.github.com/jsdevtools/apollo-client-jsdevtools)](https://img.shields.io/github/contributors/jsdevtools/apollo-client-jsdevtools.svg)
+[![GitHub contributors](https://img.shields.io/github/contributors/jsdevtools/apollo-client-jsdevtools.svg)](https://www.github.com/jsdevtools/apollo-client-jsdevtools)
 
-[![GitHub last commit](https://www.github.com/jsdevtools/apollo-client-jsdevtools)](https://img.shields.io/github/last-commit/jsdevtools/apollo-client-jsdevtools.svg)
+[![GitHub last commit](https://img.shields.io/github/last-commit/jsdevtools/apollo-client-jsdevtools.svg)](https://www.github.com/jsdevtools/apollo-client-jsdevtools)
 
-[![GitHub Release Date](https://www.github.com/jsdevtools/apollo-client-jsdevtools)](https://img.shields.io/github/release-date/jsdevtools/apollo-client.svg)
+[![GitHub Release Date](https://img.shields.io/github/release-date/jsdevtools/apollo-client-jsdevtools.svg)](https://www.github.com/jsdevtools/apollo-client-jsdevtools)
 
 ## Client
