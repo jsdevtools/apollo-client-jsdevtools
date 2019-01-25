@@ -22,6 +22,8 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/jsdevtools/apollo-client-jsdevtools.svg)](https://greenkeeper.io/)
 
+[![Snyk](https://img.shields.io/snyk/vulnerabilities/github/jsdevtools/apollo-client-jsdevtools.svg)](https://app.snyk.io/org/jsdevtools/)
+
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/jsdevtools/apollo-client-jsdevtools.svg?columns=all)](https://waffle.io/jsdevtools/apollo-client-jsdevtools)
 
 ## Client
