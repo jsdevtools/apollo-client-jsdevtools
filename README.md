@@ -4,13 +4,13 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/f16251b5099f0bd501d7/maintainability)](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools/maintainability)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/f16251b5099f0bd501d7/maintainability-percentage)](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools/maintainability-percentage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f16251b5099f0bd501d7/maintainability)](https://img.shields.io/codeclimate/maintainability-percentage/jsdevtools/apollo-client-jsdevtools.svg)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/f16251b5099f0bd501d7/test_coverage)](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools/test_coverage)
+[![Test Coverage](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools)](https://img.shields.io/codeclimate/coverage/jsdevtools/apollo-client-jsdevtools.svg)
 
-[![Issues](https://api.codeclimate.com/v1/badges/f16251b5099f0bd501d7/issues)](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools/issues)
+[![Issue Count](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools/issues)](https://img.shields.io/codeclimate/issues/jsdevtools/apollo-client-jsdevtools.svg)
 
-[![Technical Debt](https://api.codeclimate.com/v1/badges/f16251b5099f0bd501d7/tech-debt)](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools/tech-debt)
+[![Technical Debt](https://codeclimate.com/github/jsdevtools/apollo-client-jsdevtools)](https://img.shields.io/codeclimate/tech-debt/jsdevtools/apollo-client-jsdevtools.svg)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0bddbab0a7f34ab38b1db14f2f755602)](https://app.codacy.com/app/jsdevtools/apollo-client-jsdevtools?utm_source=github.com&utm_medium=referral&utm_content=jsdevtools/apollo-client-jsdevtools&utm_campaign=Badge_Grade_Settings)
 
