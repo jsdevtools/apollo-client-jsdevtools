@@ -6,17 +6,6 @@ jobs:
       - image: circleci/node:8
     steps:
       - checkout
-      - run:
-          name: Update ENGINE_API_KEY at Runtime
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "prod" ]; then
-              echo 'export ENGINE_API_KEY=$PROD_ENGINE_API_KEY' >> $BASH_ENV
-            elif [ "${CIRCLE_BRANCH}" == "staging" ]; then
-              echo 'export ENGINE_API_KEY=$STAGE_ENGINE_API_KEY' >> $BASH_ENV
-            else
-              echo 'export ENGINE_API_KEY=$DEV_ENGINE_API_KEY' >> $BASH_ENV
-            fi
-            source $BASH_ENV
       - run: npm ci
       - run:
           name: Run Test and Coverage
