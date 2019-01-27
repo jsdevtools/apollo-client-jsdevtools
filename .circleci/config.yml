@@ -6,17 +6,6 @@ jobs:
       - image: circleci/node:8
     steps:
       - checkout
-      - run:
-          name: Update ENGINE_API_KEY at Runtime
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "prod" ]; then
-              echo 'export ENGINE_API_KEY=$PROD_ENGINE_API_KEY' >> $BASH_ENV
-            elif [ "${CIRCLE_BRANCH}" == "staging" ]; then
-              echo 'export ENGINE_API_KEY=$STAGE_ENGINE_API_KEY' >> $BASH_ENV
-            else
-              echo 'export ENGINE_API_KEY=$DEV_ENGINE_API_KEY' >> $BASH_ENV
-            fi
-            source $BASH_ENV
       - run: npm ci
       - run:
           name: Run Test and Coverage
@@ -37,13 +26,13 @@ jobs:
           name: Run apollo engine checks
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ] || [ "${CIRCLE_BRANCH}" == "staging" ] || [ "${CIRCLE_BRANCH}" == "prod" ]; then
-              npx apollo client:check --tag=${ENGINE_TAG}
+              npx apollo client:check --tag=${CIRCLE_BRANCH}
             fi
       - run: 
           name: Push to apollo engine
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ] || [ "${CIRCLE_BRANCH}" == "staging" ] || [ "${CIRCLE_BRANCH}" == "prod" ]; then
-              npx apollo client:push --tag=${ENGINE_TAG}
+              npx apollo client:push --tag=${CIRCLE_BRANCH}
             fi
 
   CoPilot:
