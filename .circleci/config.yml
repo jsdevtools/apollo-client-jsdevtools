@@ -26,13 +26,13 @@ jobs:
           name: Run apollo engine checks
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ] || [ "${CIRCLE_BRANCH}" == "staging" ] || [ "${CIRCLE_BRANCH}" == "prod" ]; then
-              npx apollo client:check --tag=${ENGINE_TAG}
+              npx apollo client:check --tag=${CIRCLE_BRANCH}
             fi
       - run: 
           name: Push to apollo engine
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ] || [ "${CIRCLE_BRANCH}" == "staging" ] || [ "${CIRCLE_BRANCH}" == "prod" ]; then
-              npx apollo client:push --tag=${ENGINE_TAG}
+              npx apollo client:push --tag=${CIRCLE_BRANCH}
             fi
 
   CoPilot:
