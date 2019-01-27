@@ -32,7 +32,7 @@ jobs:
           name: Push to apollo engine
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ] || [ "${CIRCLE_BRANCH}" == "staging" ] || [ "${CIRCLE_BRANCH}" == "prod" ]; then
-              npx apollo client:push --clientName "SpaceBuild" --includes="src/**/*.{ts,js,graphql}" --tag=${CIRCLE_BRANCH}
+              npx apollo client:push --clientName "SpaceBuild" --includes="src/**/*.{ts,js,graphql}" --tag=${CIRCLE_BRANCH} --endpoint="https://dev-graphql.jsdevtools.com/graphql"
             fi
 
   CoPilot:
