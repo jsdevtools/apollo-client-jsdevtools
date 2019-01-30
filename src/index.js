@@ -18,7 +18,7 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
   link: new HttpLink({
-    uri: `${process.env.NPM_API_HOST}/${process.env.NPM_API_ENDPOINT}`,
+    uri: process.env.NPM_API_HOST + '/' + process.env.NPM_API_ENDPOINT,
     headers: {
       authorization: localStorage.getItem('token'),
       'client-name': 'Space Explorer [web]',
