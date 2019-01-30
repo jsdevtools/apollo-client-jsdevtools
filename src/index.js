@@ -18,9 +18,10 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
   link: new HttpLink({
-    uri: process.env.SPACE_API_HOST && process.env.SPACE_API_ENDPOINT && process.env.PORT
-      ? `${process.env.SPACE_API_HOST}:${process.env.PORT}/${process.env.SPACE_API_ENDPOINT}`
-      : 'http://localhost:4000/graphql',
+    uri:
+      process.env.SPACE_API_HOST && process.env.SPACE_API_ENDPOINT
+        ? `${process.env.SPACE_API_HOST}/${process.env.SPACE_API_ENDPOINT}`
+        : 'http://localhost:4000/graphql',
     headers: {
       authorization: localStorage.getItem('token'),
       'client-name': 'Space Explorer [web]',
@@ -54,9 +55,7 @@ const IS_LOGGED_IN = gql`
 injectStyles();
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <Query query={IS_LOGGED_IN}>
-      {({ data }) => (data.isLoggedIn ? <Pages /> : <Login />)}
-    </Query>
+    <Query query={IS_LOGGED_IN}>{({ data }) => (data.isLoggedIn ? <Pages /> : <Login />)}</Query>
   </ApolloProvider>,
   document.getElementById('root')
 );
