@@ -18,10 +18,7 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
   link: new HttpLink({
-    uri:
-      process.env.NPM_API_HOST && process.env.NPM_API_ENDPOINT
-        ? `${process.env.NPM_API_HOST}/${process.env.NPM_API_ENDPOINT}`
-        : 'http://localhost:4000/graphql',
+    uri: `${process.env.NPM_API_HOST}/${process.env.NPM_API_ENDPOINT}`,
     headers: {
       authorization: localStorage.getItem('token'),
       'client-name': 'Space Explorer [web]',
