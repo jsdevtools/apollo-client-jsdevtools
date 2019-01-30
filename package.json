@@ -35,7 +35,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
-    "run:ios-demo": "npx artillery run apollo-internal-demos/ios-workload.yml"
+    "run:ios-demo": "npx artillery run apollo-internal-demos/ios-workload.yml",
+    "postinstall": "REACT_APP_HOST=$SPACE_API_HOST REACT_APP_ENDPOINT=$SPACE_API_ENDPOINT npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"

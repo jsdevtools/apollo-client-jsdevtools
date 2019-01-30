@@ -1,1 +1,1 @@
-web: NPM_API_HOST=$SPACE_API_HOST NPM_API_ENDPOINT=$SPACE_API_ENDPOINT npm run start
+web: http-server $BUILD_DIR
