@@ -32,7 +32,7 @@ export default function BookTrips({ cartItems }) {
         cache.writeData({ data: { cartItems: [] } });
       }}
     >
-      {(bookTrips, { data, loading, error }) =>
+      {(bookTrips, { data }) =>
         data && data.bookTrips && !data.bookTrips.success ? (
           <p data-testid="message">{data.bookTrips.message}</p>
         ) : (
