@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';

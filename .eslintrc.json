@@ -28,6 +28,12 @@
         "allow": ["log", "warn", "error"]
       }
     ],
+    "no-nested-ternary": [
+      "error",
+      {
+        "allow": ["log", "warn", "error"]
+      }
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
