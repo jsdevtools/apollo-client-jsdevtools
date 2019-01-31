@@ -53,7 +53,7 @@ export default function Launches() {
                     variables: {
                       after: data.launches.cursor
                     },
-                    updateQuery: (prev, { fetchMoreResult, ...rest }) => {
+                    updateQuery: (prev, { fetchMoreResult }) => {
                       if (!fetchMoreResult) return prev;
                       return {
                         ...fetchMoreResult,
