@@ -30,7 +30,15 @@
     ],
     "import/no-extraneous-dependencies": [
       "error",
-      { "devDependencies": ["**/*.test.js", "**/*.spec.js", "**/*.stories.js", "stories/index.js"] }
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "**/*.spec.js",
+          "**/*.stories.js",
+          "stories/index.js",
+          "**/test-utils.js"
+        ]
+      }
     ]
   },
   "plugins": ["react", "prettier"],

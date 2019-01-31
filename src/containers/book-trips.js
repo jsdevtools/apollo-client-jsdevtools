@@ -26,7 +26,7 @@ export default function BookTrips({ cartItems }) {
       variables={{ launchIds: cartItems }}
       refetchQueries={cartItems.map(launchId => ({
         query: GET_LAUNCH,
-        variables: { launchId },
+        variables: { launchId }
       }))}
       update={cache => {
         cache.writeData({ data: { cartItems: [] } });

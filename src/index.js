@@ -18,7 +18,10 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
   cache,
   link: new HttpLink({
-    uri: process.env.REACT_APP_HOST + '/' + process.env.REACT_APP_ENDPOINT,
+    uri:
+      process.env.REACT_APP_HOST && process.env.REACT_APP_ENDPOINT
+        ? `${process.env.REACT_APP_HOST}/${process.env.REACT_APP_ENDPOINT}`
+        : 'http://localhost:4000/graphql',
     headers: {
       authorization: localStorage.getItem('token'),
       'client-name': 'Space Explorer [web]',

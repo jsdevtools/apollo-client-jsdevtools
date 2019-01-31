@@ -35,8 +35,8 @@ export default function ActionButton({ isBooked, id, isInCart }) {
       refetchQueries={[
         {
           query: GET_LAUNCH_DETAILS,
-          variables: { launchId: id },
-        },
+          variables: { launchId: id }
+        }
       ]}
     >
       {(mutate, { loading, error }) => {
@@ -45,16 +45,8 @@ export default function ActionButton({ isBooked, id, isInCart }) {
 
         return (
           <div>
-            <Button
-              onClick={mutate}
-              isBooked={isBooked}
-              data-testid={'action-button'}
-            >
-              {isBooked
-                ? 'Cancel This Trip'
-                : isInCart
-                  ? 'Remove from Cart'
-                  : 'Add to Cart'}
+            <Button onClick={mutate} isBooked={isBooked} data-testid={'action-button'}>
+              {isBooked ? 'Cancel This Trip' : isInCart ? 'Remove from Cart' : 'Add to Cart'}
             </Button>
           </div>
         );

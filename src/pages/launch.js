@@ -29,9 +29,7 @@ export default function Launch({ launchId }) {
 
         return (
           <Fragment>
-            <Header image={data.launch.mission.missionPatch}>
-              {data.launch.mission.name}
-            </Header>
+            <Header image={data.launch.mission.missionPatch}>{data.launch.mission.name}</Header>
             <LaunchDetail {...data.launch} />
             <ActionButton {...data.launch} />
           </Fragment>
