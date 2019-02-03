@@ -1,5 +1,6 @@
-import styled from '@emotion/styled';
-import { css } from 'emotion';
+/* eslint-disable prettier/prettier */
+import styled from 'styled-components';
+import { css } from 'emotion/macro';
 import { Link } from '@reach/router';
 import { colors, unit } from '../styles';
 
@@ -20,8 +21,8 @@ export const menuItemClassName = css({
   }
 });
 
-const MenuItem = styled(Link)(menuItemClassName, {
+const MenuItem = styled(Link)`
   textDecoration: 'none'
-});
+`;
 
 export default MenuItem;

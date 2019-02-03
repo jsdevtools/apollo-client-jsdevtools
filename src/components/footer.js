@@ -12,17 +12,83 @@ export default function Footer() {
   return (
     <Container>
       <InnerContainer>
-        <MenuItem to="/">
-          <HomeIcon />
-          Home
+        <MenuItem style={{ textDecoration: 'none' }} to="/">
+          <HomeIcon
+            style={{
+              svg: {
+                display: 'block',
+                width: 60,
+                margin: `0 auto ${unit}px`,
+                fill: `${colors.secondary}`
+              }
+            }}
+          />
+          <span
+            style={{
+              flexGrow: 1,
+              width: 0,
+              fontFamily: 'inherit',
+              fontSize: 20,
+              color: 'inherit',
+              letterSpacing: 1.5,
+              textTransform: 'uppercase',
+              textAlign: 'center'
+            }}
+          >
+            Home
+          </span>
         </MenuItem>
-        <MenuItem to="/cart">
-          <CartIcon />
-          Cart
+        <MenuItem style={{ textDecoration: 'none' }} to="/cart">
+          <CartIcon
+            style={{
+              svg: {
+                display: 'block',
+                width: 60,
+                margin: `0 auto ${unit}px`,
+                fill: `${colors.secondary}`
+              }
+            }}
+          />
+          <span
+            style={{
+              flexGrow: 1,
+              width: 0,
+              fontFamily: 'inherit',
+              fontSize: 20,
+              color: 'inherit',
+              letterSpacing: 1.5,
+              textTransform: 'uppercase',
+              textAlign: 'center'
+            }}
+          >
+            Cart
+          </span>
         </MenuItem>
-        <MenuItem to="/profile">
-          <ProfileIcon />
-          Profile
+        <MenuItem style={{ textDecoration: 'none' }} to="/profile">
+          <ProfileIcon
+            style={{
+              svg: {
+                display: 'block',
+                width: 60,
+                margin: `0 auto ${unit}px`,
+                fill: `${colors.secondary}`
+              }
+            }}
+          />
+          <span
+            style={{
+              flexGrow: 1,
+              width: 0,
+              fontFamily: 'inherit',
+              fontSize: 20,
+              color: 'inherit',
+              letterSpacing: 1.5,
+              textTransform: 'uppercase',
+              textAlign: 'center'
+            }}
+          >
+            Profile
+          </span>
         </MenuItem>
         <LogoutButton />
       </InnerContainer>

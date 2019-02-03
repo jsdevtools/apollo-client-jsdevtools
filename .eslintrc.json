@@ -28,12 +28,7 @@
         "allow": ["log", "warn", "error"]
       }
     ],
-    "no-nested-ternary": [
-      "error",
-      {
-        "allow": ["log", "warn", "error"]
-      }
-    ],
+    "no-nested-ternary": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
