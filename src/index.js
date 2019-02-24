@@ -7,6 +7,7 @@ import { HttpLink } from 'apollo-link-http';
 import { Query, ApolloProvider } from 'react-apollo';
 import gql from 'graphql-tag';
 
+import { setContext } from 'apollo-link-context';
 import Pages from './pages';
 import Login from './pages/login';
 import { resolvers, typeDefs } from './resolvers';
@@ -15,25 +16,36 @@ import injectStyles from './styles';
 // Set up our apollo-client to point at the server we created
 // this can be local or a remote endpoint
 const cache = new InMemoryCache();
+const httpLink = new HttpLink({
+  uri:
+    process.env.REACT_APP_HOST && process.env.REACT_APP_ENDPOINT
+      ? `${process.env.REACT_APP_HOST}/${process.env.REACT_APP_ENDPOINT}`
+      : 'http://localhost:4000/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = localStorage.getItem('token');
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token,
+      'client-name': 'Space Explorer [web]',
+      'client-version': '1.0.0',
+    },
+  };
+});
+
 const client = new ApolloClient({
   cache,
-  link: new HttpLink({
-    uri:
-      process.env.REACT_APP_HOST && process.env.REACT_APP_ENDPOINT
-        ? `${process.env.REACT_APP_HOST}/${process.env.REACT_APP_ENDPOINT}`
-        : 'http://localhost:4000/graphql',
-    headers: {
-      authorization: localStorage.getItem('token'),
-      'client-name': 'Space Explorer [web]',
-      'client-version': '1.0.0'
-    }
-  }),
+  link: authLink.concat(httpLink),
   initializers: {
     isLoggedIn: () => !!localStorage.getItem('token'),
-    cartItems: () => []
+    cartItems: () => [],
   },
   resolvers,
-  typeDefs
+  typeDefs,
 });
 
 /**
