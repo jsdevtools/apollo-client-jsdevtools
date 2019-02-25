@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from '@emotion/styled';
-import { css } from 'emotion';
+import css from '@emotion/css';
 import { size } from 'polished';
 
 import Button from './button';
@@ -9,49 +9,6 @@ import { ReactComponent as Logo } from '../assets/logo.svg';
 import { ReactComponent as Curve } from '../assets/curve.svg';
 import { ReactComponent as Rocket } from '../assets/rocket.svg';
 import { colors, unit } from '../styles';
-
-export default class LoginForm extends Component {
-  state = { email: '' };
-
-  onChange = event => {
-    const email = event.target.value;
-    // eslint-disable-next-line no-unused-vars
-    this.setState(s => ({ email }));
-  };
-
-  onSubmit = event => {
-    event.preventDefault();
-    this.props.login({ variables: { email: this.state.email } });
-  };
-
-  render() {
-    return (
-      <Container>
-        <Header>
-          <StyledCurve />
-          <StyledLogo />
-        </Header>
-        <StyledRocket />
-        <Heading>Space Explorer</Heading>
-        <StyledForm onSubmit={this.onSubmit}>
-          <StyledInput
-            required
-            type="email"
-            name="email"
-            placeholder="Email"
-            data-testid="login-input"
-            onChange={this.onChange}
-          />
-          <Button type="submit">Log in</Button>
-        </StyledForm>
-      </Container>
-    );
-  }
-}
-
-/**
- * STYLED COMPONENTS USED IN THIS FILE ARE BELOW HERE
- */
 
 const Container = styled('div')({
   display: 'flex',
@@ -120,3 +77,42 @@ const StyledInput = styled('input')({
     borderColor: colors.primary,
   },
 });
+
+export default class LoginForm extends Component {
+  state = { email: '' };
+
+  onChange = event => {
+    const email = event.target.value;
+    // eslint-disable-next-line no-unused-vars
+    this.setState(s => ({ email }));
+  };
+
+  onSubmit = event => {
+    event.preventDefault();
+    this.props.login({ variables: { email: this.state.email } });
+  };
+
+  render() {
+    return (
+      <Container>
+        <Header>
+          <StyledCurve />
+          <StyledLogo />
+        </Header>
+        <StyledRocket />
+        <Heading>Space Explorer</Heading>
+        <StyledForm onSubmit={this.onSubmit}>
+          <StyledInput
+            required
+            type="email"
+            name="email"
+            placeholder="Email"
+            data-testid="login-input"
+            onChange={this.onChange}
+          />
+          <Button type="submit">Log in</Button>
+        </StyledForm>
+      </Container>
+    );
+  }
+}

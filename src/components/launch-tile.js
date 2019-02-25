@@ -1,12 +1,31 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { css } from 'emotion';
+import css from '@emotion/css';
 import { Link } from '@reach/router';
 
 import galaxy from '../assets/images/galaxy.jpg';
 import iss from '../assets/images/iss.jpg';
 import moon from '../assets/images/moon.jpg';
 import { unit } from '../styles';
+
+export const cardClassName = css({
+  padding: `${unit * 4}px ${unit * 5}px`,
+  borderRadius: 7,
+  color: 'white',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+});
+
+const padding = unit * 2;
+const StyledLink = styled(Link)(cardClassName, {
+  display: 'block',
+  height: 193,
+  marginTop: padding,
+  textDecoration: 'none',
+  ':not(:last-child)': {
+    marginBottom: padding * 2,
+  },
+});
 
 const backgrounds = [galaxy, iss, moon];
 export function getBackgroundImage(id) {
@@ -19,7 +38,7 @@ export default ({ launch }) => {
     <StyledLink
       to={`/launch/${id}`}
       style={{
-        backgroundImage: getBackgroundImage(id)
+        backgroundImage: getBackgroundImage(id),
       }}
     >
       <h3>{mission.name}</h3>
@@ -27,26 +46,3 @@ export default ({ launch }) => {
     </StyledLink>
   );
 };
-
-/**
- * STYLED COMPONENTS USED IN THIS FILE ARE BELOW HERE
- */
-
-export const cardClassName = css({
-  padding: `${unit * 4}px ${unit * 5}px`,
-  borderRadius: 7,
-  color: 'white',
-  backgroundSize: 'cover',
-  backgroundPosition: 'center'
-});
-
-const padding = unit * 2;
-const StyledLink = styled(Link)(cardClassName, {
-  display: 'block',
-  height: 193,
-  marginTop: padding,
-  textDecoration: 'none',
-  ':not(:last-child)': {
-    marginBottom: padding * 2
-  }
-});

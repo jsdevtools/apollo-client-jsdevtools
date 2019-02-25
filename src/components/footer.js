@@ -8,6 +8,23 @@ import { ReactComponent as CartIcon } from '../assets/icons/cart.svg';
 import { ReactComponent as ProfileIcon } from '../assets/icons/profile.svg';
 import { colors, unit } from '../styles';
 
+const Container = styled('footer')({
+  flexShrink: 0,
+  marginTop: 'auto',
+  backgroundColor: 'white',
+  color: colors.textSecondary,
+  position: 'sticky',
+  bottom: 0,
+});
+
+const InnerContainer = styled('div')({
+  display: 'flex',
+  alignItems: 'center',
+  maxWidth: 460,
+  padding: unit * 2.5,
+  margin: '0 auto',
+});
+
 export default function Footer() {
   return (
     <Container>
@@ -15,12 +32,10 @@ export default function Footer() {
         <MenuItem style={{ textDecoration: 'none' }} to="/">
           <HomeIcon
             style={{
-              svg: {
-                display: 'block',
-                width: 60,
-                margin: `0 auto ${unit}px`,
-                fill: `${colors.secondary}`
-              }
+              display: 'block',
+              width: 60,
+              margin: `0 auto ${unit}px`,
+              fill: `${colors.secondary}`,
             }}
           />
           <span
@@ -32,7 +47,7 @@ export default function Footer() {
               color: 'inherit',
               letterSpacing: 1.5,
               textTransform: 'uppercase',
-              textAlign: 'center'
+              textAlign: 'center',
             }}
           >
             Home
@@ -41,12 +56,10 @@ export default function Footer() {
         <MenuItem style={{ textDecoration: 'none' }} to="/cart">
           <CartIcon
             style={{
-              svg: {
-                display: 'block',
-                width: 60,
-                margin: `0 auto ${unit}px`,
-                fill: `${colors.secondary}`
-              }
+              display: 'block',
+              width: 60,
+              margin: `0 auto ${unit}px`,
+              fill: `${colors.secondary}`,
             }}
           />
           <span
@@ -58,7 +71,7 @@ export default function Footer() {
               color: 'inherit',
               letterSpacing: 1.5,
               textTransform: 'uppercase',
-              textAlign: 'center'
+              textAlign: 'center',
             }}
           >
             Cart
@@ -67,12 +80,10 @@ export default function Footer() {
         <MenuItem style={{ textDecoration: 'none' }} to="/profile">
           <ProfileIcon
             style={{
-              svg: {
-                display: 'block',
-                width: 60,
-                margin: `0 auto ${unit}px`,
-                fill: `${colors.secondary}`
-              }
+              display: 'block',
+              width: 60,
+              margin: `0 auto ${unit}px`,
+              fill: `${colors.secondary}`,
             }}
           />
           <span
@@ -84,7 +95,7 @@ export default function Footer() {
               color: 'inherit',
               letterSpacing: 1.5,
               textTransform: 'uppercase',
-              textAlign: 'center'
+              textAlign: 'center',
             }}
           >
             Profile
@@ -95,24 +106,3 @@ export default function Footer() {
     </Container>
   );
 }
-
-/**
- * STYLED COMPONENTS USED IN THIS FILE ARE BELOW HERE
- */
-
-const Container = styled('footer')({
-  flexShrink: 0,
-  marginTop: 'auto',
-  backgroundColor: 'white',
-  color: colors.textSecondary,
-  position: 'sticky',
-  bottom: 0
-});
-
-const InnerContainer = styled('div')({
-  display: 'flex',
-  alignItems: 'center',
-  maxWidth: 460,
-  padding: unit * 2.5,
-  margin: '0 auto'
-});

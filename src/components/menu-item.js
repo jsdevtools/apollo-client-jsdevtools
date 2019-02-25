@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import styled from 'styled-components';
-import { css } from 'emotion/macro';
+import css from '@emotion/css';
 import { Link } from '@reach/router';
 import { colors, unit } from '../styles';
 
