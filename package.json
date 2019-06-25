@@ -17,7 +17,7 @@
     "coveralls": "^3.0.2",
     "emotion": "^10.0.6",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.15.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
