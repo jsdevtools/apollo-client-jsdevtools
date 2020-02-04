@@ -22,7 +22,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "graphql": "^14.0.2",
-    "graphql-tag": "^2.10.0",
+    "graphql-tag": "2.10.1",
     "http-server": "^0.11.1",
     "polished": "^2.3.3",
     "prettier": "^1.16.1",
