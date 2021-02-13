@@ -27,7 +27,7 @@
     "polished": "^2.3.3",
     "prettier": "^1.16.1",
     "react": "^16.7.0",
-    "react-apollo": "alpha",
+    "react-apollo": "2.4.0",
     "react-dom": "^16.7.0",
     "react-emotion": "^10.0.0",
     "react-scripts": "^2.1.5",
